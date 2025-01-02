@@ -1,0 +1,13 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block content %}
+
+        <div class="book-entry">
+            <h2><a href="">{{book.title}}</a></h2>
+            <p>{{book.description}}</p>
+        </div>
+        <a href="{% url 'book_update' book.pk %}">+Edit</a>
+        <a href="{% url 'book_delete' book.pk %}">+Delete</a>
+
+
+{% endblock content %}

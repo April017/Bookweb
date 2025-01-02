@@ -1,0 +1,24 @@
+{% load static %}
+<link rel="stylesheet" href="{% static '/css/base.css' %}">
+<body>
+        <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo"><a href="{% url 'frontpage' %}">LibreRo</a></div>
+             <ul>
+                <li><a href="{% url 'frontpage' %}">Home</a></li>
+                <div class="dropdown">
+                    <li><a href="{% url 'about' %}">About</a></li>
+                    <div class="dropdown-content">
+                        <a href="">Website</a>
+                        <a href="">Team</a>
+                        <a href="{% url 'account' %}">Account</a>
+                    </div>
+                </div>
+                <li><a href="{% url 'search' %}">Search</a></li>
+                <li><a href="{% url 'book' %}">Books</a></li>
+
+             </ul>
+         </div>
+     </div>
+    </nav>
+ </body>

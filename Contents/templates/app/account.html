@@ -1,0 +1,38 @@
+{% extends 'app/base.html' %}
+
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static '/css/base.css' %}">
+<body>
+    <div id ="sec1">
+            <div class="wrapper">
+                <form action="">
+                    <div class="design">
+                        <h1>Login</h1>
+
+                            <form method="POST">
+                                {% csrf_token %}
+
+                                <div class="input-box"> username
+                                    <input type="text" id="username" name="username" required>
+                                </div>
+                                <div class="input-box"> password
+                                    <input type="password" id="password" name="password" required>
+                                </div>
+
+                                <a href="{% url 'frontpage' %}" class="btn">LOGIN</a>
+
+                                <div class="register-link">
+                                    <p>Don't have an account? <a href="{% url 'register' %}">Register</a></p>
+                                </div>
+
+                        </form>
+                    </div>
+             </form>
+         </div>
+ </div>
+
+</body>
+
+{% endblock content %}
